@@ -15,7 +15,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.appNameLabel.stringValue = "SessionRestore";
+        self.appNameLabel.stringValue = "Session Buddy";
     }
     
     @IBAction func openSafariExtensionPreferences(_ sender: AnyObject?) {

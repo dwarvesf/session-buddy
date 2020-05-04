@@ -7,18 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0839881E245FD801008F2656 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0839881D245FD801008F2656 /* SyncEngine.swift */; };
+		0839881F245FD801008F2656 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0839881D245FD801008F2656 /* SyncEngine.swift */; };
+		08398822245FD842008F2656 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398821245FD842008F2656 /* Const.swift */; };
+		08398823245FD842008F2656 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398821245FD842008F2656 /* Const.swift */; };
+		08398842246000DB008F2656 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398841246000DB008F2656 /* SessionStore.swift */; };
+		08398843246000DB008F2656 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398841246000DB008F2656 /* SessionStore.swift */; };
+		08398845246003BE008F2656 /* SyncEngine+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398844246003BE008F2656 /* SyncEngine+Notification.swift */; };
+		08398846246003BE008F2656 /* SyncEngine+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398844246003BE008F2656 /* SyncEngine+Notification.swift */; };
+		0839884724600D2E008F2656 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085A91D22457DC870071B904 /* CloudKit.framework */; };
+		0839884D24602FE9008F2656 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0839884C24602FE9008F2656 /* ToolbarItemIcon.pdf */; };
+		0839884F24603149008F2656 /* file.png in Resources */ = {isa = PBXBuildFile; fileRef = 0839884E24603149008F2656 /* file.png */; };
+		085A91C62456E0E10071B904 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91C42456E0E10071B904 /* DetailViewController.swift */; };
+		085A91C72456E0E10071B904 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085A91C52456E0E10071B904 /* DetailViewController.xib */; };
+		085A91D12457420F0071B904 /* TabCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91D02457420F0071B904 /* TabCellView.swift */; };
+		085A91D32457DC870071B904 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085A91D22457DC870071B904 /* CloudKit.framework */; };
+		085A91D62459DC890071B904 /* Error+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91D52459DC890071B904 /* Error+CloudKit.swift */; };
+		085A91D72459DC8F0071B904 /* Error+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91D52459DC890071B904 /* Error+CloudKit.swift */; };
+		085A91DD2459DD790071B904 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91DC2459DD790071B904 /* Tab.swift */; };
+		085A91DE2459DD790071B904 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91DC2459DD790071B904 /* Tab.swift */; };
+		085A91E02459DDDC0071B904 /* Session+Cloudkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91DF2459DDDC0071B904 /* Session+Cloudkit.swift */; };
+		085A91E12459DDDC0071B904 /* Session+Cloudkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91DF2459DDDC0071B904 /* Session+Cloudkit.swift */; };
+		085A91E32459DE120071B904 /* Tab+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91E22459DE120071B904 /* Tab+CloudKit.swift */; };
+		085A91E42459DE120071B904 /* Tab+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91E22459DE120071B904 /* Tab+CloudKit.swift */; };
 		08CDF3A3244476140015732A /* SessionRestore.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A2244476140015732A /* SessionRestore.entitlements */; };
 		08CDF3A5244476140015732A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3A4244476140015732A /* AppDelegate.swift */; };
 		08CDF3A8244476140015732A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A6244476140015732A /* Main.storyboard */; };
 		08CDF3AA244476140015732A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3A9244476140015732A /* ViewController.swift */; };
 		08CDF3AC244476160015732A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3AB244476160015732A /* Assets.xcassets */; };
-		08CDF3B3244476160015732A /* SessionRestore Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08CDF3B2244476160015732A /* SessionRestore Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		08CDF3B3244476160015732A /* Session Buddy Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 08CDF3B2244476160015732A /* Session Buddy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		08CDF3B8244476160015732A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CDF3B7244476160015732A /* Cocoa.framework */; };
 		08CDF3BB244476160015732A /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3BA244476160015732A /* SafariExtensionHandler.swift */; };
 		08CDF3BD244476160015732A /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3BC244476160015732A /* SafariExtensionViewController.swift */; };
 		08CDF3C0244476160015732A /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3BE244476160015732A /* SafariExtensionViewController.xib */; };
 		08CDF3C3244476160015732A /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3C2244476160015732A /* script.js */; };
-		08CDF3C5244476160015732A /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3C4244476160015732A /* ToolbarItemIcon.pdf */; };
+		08CDF3C5244476160015732A /* ToolbarItemIcon1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3C4244476160015732A /* ToolbarItemIcon1.pdf */; };
+		08CDF3D22444B7790015732A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D12444B7780015732A /* Session.swift */; };
+		08CDF3D32444B7790015732A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D12444B7780015732A /* Session.swift */; };
+		08CDF3D52444D1C70015732A /* SessionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D42444D1C70015732A /* SessionCellView.swift */; };
+		08CDF3D72444D7760015732A /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D62444D7760015732A /* LocalStorage.swift */; };
+		08CDF3D82444D7760015732A /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D62444D7760015732A /* LocalStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				08CDF3B3244476160015732A /* SessionRestore Extension.appex in Embed App Extensions */,
+				08CDF3B3244476160015732A /* Session Buddy Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,22 +74,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08CDF39F244476140015732A /* SessionRestore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SessionRestore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0839881D245FD801008F2656 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		08398821245FD842008F2656 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		08398841246000DB008F2656 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		08398844246003BE008F2656 /* SyncEngine+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SyncEngine+Notification.swift"; sourceTree = "<group>"; };
+		0839884C24602FE9008F2656 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		0839884E24603149008F2656 /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file.png; sourceTree = "<group>"; };
+		085A91C42456E0E10071B904 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		085A91C52456E0E10071B904 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		085A91D02457420F0071B904 /* TabCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCellView.swift; sourceTree = "<group>"; };
+		085A91D22457DC870071B904 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		085A91D52459DC890071B904 /* Error+CloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+CloudKit.swift"; sourceTree = "<group>"; };
+		085A91DC2459DD790071B904 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		085A91DF2459DDDC0071B904 /* Session+Cloudkit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+Cloudkit.swift"; sourceTree = "<group>"; };
+		085A91E22459DE120071B904 /* Tab+CloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+CloudKit.swift"; sourceTree = "<group>"; };
+		08CDF39F244476140015732A /* Session Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Session Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CDF3A2244476140015732A /* SessionRestore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionRestore.entitlements; sourceTree = "<group>"; };
 		08CDF3A4244476140015732A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CDF3A7244476140015732A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08CDF3A9244476140015732A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		08CDF3AB244476160015732A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08CDF3AD244476160015732A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08CDF3B2244476160015732A /* SessionRestore Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SessionRestore Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08CDF3B2244476160015732A /* Session Buddy Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Session Buddy Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CDF3B7244476160015732A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		08CDF3BA244476160015732A /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		08CDF3BC244476160015732A /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
 		08CDF3BF244476160015732A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		08CDF3C1244476160015732A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08CDF3C2244476160015732A /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		08CDF3C4244476160015732A /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		08CDF3C4244476160015732A /* ToolbarItemIcon1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon1.pdf; sourceTree = "<group>"; };
 		08CDF3C6244476160015732A /* SessionRestore_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionRestore_Extension.entitlements; sourceTree = "<group>"; };
+		08CDF3D12444B7780015732A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		08CDF3D42444D1C70015732A /* SessionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCellView.swift; sourceTree = "<group>"; };
+		08CDF3D62444D7760015732A /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0839884724600D2E008F2656 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,15 +123,99 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CDF3B8244476160015732A /* Cocoa.framework in Frameworks */,
+				085A91D32457DC870071B904 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08398820245FD833008F2656 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				08398821245FD842008F2656 /* Const.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		085A91CB24573E190071B904 /* SessionListView */ = {
+			isa = PBXGroup;
+			children = (
+				08CDF3D42444D1C70015732A /* SessionCellView.swift */,
+				08CDF3BC244476160015732A /* SafariExtensionViewController.swift */,
+				08CDF3BE244476160015732A /* SafariExtensionViewController.xib */,
+			);
+			path = SessionListView;
+			sourceTree = "<group>";
+		};
+		085A91CD24573E400071B904 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				085A91C42456E0E10071B904 /* DetailViewController.swift */,
+				085A91C52456E0E10071B904 /* DetailViewController.xib */,
+				085A91D02457420F0071B904 /* TabCellView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		085A91CF24573E590071B904 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				085A91CB24573E190071B904 /* SessionListView */,
+				085A91CD24573E400071B904 /* DetailView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		085A91D42459DC6A0071B904 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				085A91D52459DC890071B904 /* Error+CloudKit.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		085A91D82459DCB00071B904 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				085A91DB2459DD5F0071B904 /* Tab */,
+				085A91DA2459DD590071B904 /* Session */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		085A91D92459DD0A0071B904 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0839881D245FD801008F2656 /* SyncEngine.swift */,
+				08398841246000DB008F2656 /* SessionStore.swift */,
+				08398844246003BE008F2656 /* SyncEngine+Notification.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		085A91DA2459DD590071B904 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				08CDF3D12444B7780015732A /* Session.swift */,
+				085A91DF2459DDDC0071B904 /* Session+Cloudkit.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		085A91DB2459DD5F0071B904 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				085A91DC2459DD790071B904 /* Tab.swift */,
+				085A91E22459DE120071B904 /* Tab+CloudKit.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		08CDF396244476140015732A = {
 			isa = PBXGroup;
 			children = (
+				08CDF3D02444B75C0015732A /* Share */,
 				08CDF3A1244476140015732A /* SessionRestore */,
 				08CDF3B9244476160015732A /* SessionRestore Extension */,
 				08CDF3B6244476160015732A /* Frameworks */,
@@ -96,8 +226,8 @@
 		08CDF3A0244476140015732A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				08CDF39F244476140015732A /* SessionRestore.app */,
-				08CDF3B2244476160015732A /* SessionRestore Extension.appex */,
+				08CDF39F244476140015732A /* Session Buddy.app */,
+				08CDF3B2244476160015732A /* Session Buddy Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +248,7 @@
 		08CDF3B6244476160015732A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				085A91D22457DC870071B904 /* CloudKit.framework */,
 				08CDF3B7244476160015732A /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -127,22 +258,35 @@
 			isa = PBXGroup;
 			children = (
 				08CDF3BA244476160015732A /* SafariExtensionHandler.swift */,
-				08CDF3BC244476160015732A /* SafariExtensionViewController.swift */,
-				08CDF3BE244476160015732A /* SafariExtensionViewController.xib */,
+				085A91CF24573E590071B904 /* Views */,
 				08CDF3C1244476160015732A /* Info.plist */,
+				0839884C24602FE9008F2656 /* ToolbarItemIcon.pdf */,
+				0839884E24603149008F2656 /* file.png */,
 				08CDF3C2244476160015732A /* script.js */,
-				08CDF3C4244476160015732A /* ToolbarItemIcon.pdf */,
+				08CDF3C4244476160015732A /* ToolbarItemIcon1.pdf */,
 				08CDF3C6244476160015732A /* SessionRestore_Extension.entitlements */,
 			);
 			path = "SessionRestore Extension";
 			sourceTree = "<group>";
 		};
+		08CDF3D02444B75C0015732A /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				08398820245FD833008F2656 /* Utils */,
+				085A91D92459DD0A0071B904 /* Storage */,
+				085A91D82459DCB00071B904 /* Models */,
+				085A91D42459DC6A0071B904 /* Extensions */,
+				08CDF3D62444D7760015732A /* LocalStorage.swift */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		08CDF39E244476140015732A /* SessionRestore */ = {
+		08CDF39E244476140015732A /* Session Buddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08CDF3CD244476160015732A /* Build configuration list for PBXNativeTarget "SessionRestore" */;
+			buildConfigurationList = 08CDF3CD244476160015732A /* Build configuration list for PBXNativeTarget "Session Buddy" */;
 			buildPhases = (
 				08CDF39B244476140015732A /* Sources */,
 				08CDF39C244476140015732A /* Frameworks */,
@@ -154,14 +298,14 @@
 			dependencies = (
 				08CDF3B5244476160015732A /* PBXTargetDependency */,
 			);
-			name = SessionRestore;
+			name = "Session Buddy";
 			productName = SessionRestore;
-			productReference = 08CDF39F244476140015732A /* SessionRestore.app */;
+			productReference = 08CDF39F244476140015732A /* Session Buddy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		08CDF3B1244476160015732A /* SessionRestore Extension */ = {
+		08CDF3B1244476160015732A /* Session Buddy Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 08CDF3C9244476160015732A /* Build configuration list for PBXNativeTarget "SessionRestore Extension" */;
+			buildConfigurationList = 08CDF3C9244476160015732A /* Build configuration list for PBXNativeTarget "Session Buddy Extension" */;
 			buildPhases = (
 				08CDF3AE244476160015732A /* Sources */,
 				08CDF3AF244476160015732A /* Frameworks */,
@@ -171,9 +315,9 @@
 			);
 			dependencies = (
 			);
-			name = "SessionRestore Extension";
+			name = "Session Buddy Extension";
 			productName = "SessionRestore Extension";
-			productReference = 08CDF3B2244476160015732A /* SessionRestore Extension.appex */;
+			productReference = 08CDF3B2244476160015732A /* Session Buddy Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -207,8 +351,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08CDF39E244476140015732A /* SessionRestore */,
-				08CDF3B1244476160015732A /* SessionRestore Extension */,
+				08CDF39E244476140015732A /* Session Buddy */,
+				08CDF3B1244476160015732A /* Session Buddy Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -228,9 +372,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08CDF3C5244476160015732A /* ToolbarItemIcon.pdf in Resources */,
+				0839884D24602FE9008F2656 /* ToolbarItemIcon.pdf in Resources */,
+				08CDF3C5244476160015732A /* ToolbarItemIcon1.pdf in Resources */,
 				08CDF3C0244476160015732A /* SafariExtensionViewController.xib in Resources */,
 				08CDF3C3244476160015732A /* script.js in Resources */,
+				085A91C72456E0E10071B904 /* DetailViewController.xib in Resources */,
+				0839884F24603149008F2656 /* file.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +389,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CDF3AA244476140015732A /* ViewController.swift in Sources */,
+				08CDF3D72444D7760015732A /* LocalStorage.swift in Sources */,
+				08CDF3D22444B7790015732A /* Session.swift in Sources */,
+				085A91E02459DDDC0071B904 /* Session+Cloudkit.swift in Sources */,
+				085A91DD2459DD790071B904 /* Tab.swift in Sources */,
+				085A91D72459DC8F0071B904 /* Error+CloudKit.swift in Sources */,
+				085A91E32459DE120071B904 /* Tab+CloudKit.swift in Sources */,
 				08CDF3A5244476140015732A /* AppDelegate.swift in Sources */,
+				0839881E245FD801008F2656 /* SyncEngine.swift in Sources */,
+				08398845246003BE008F2656 /* SyncEngine+Notification.swift in Sources */,
+				08398842246000DB008F2656 /* SessionStore.swift in Sources */,
+				08398822245FD842008F2656 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +407,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08398846246003BE008F2656 /* SyncEngine+Notification.swift in Sources */,
+				085A91D12457420F0071B904 /* TabCellView.swift in Sources */,
 				08CDF3BD244476160015732A /* SafariExtensionViewController.swift in Sources */,
+				0839881F245FD801008F2656 /* SyncEngine.swift in Sources */,
+				08CDF3D32444B7790015732A /* Session.swift in Sources */,
+				085A91D62459DC890071B904 /* Error+CloudKit.swift in Sources */,
 				08CDF3BB244476160015732A /* SafariExtensionHandler.swift in Sources */,
+				085A91C62456E0E10071B904 /* DetailViewController.swift in Sources */,
+				085A91DE2459DD790071B904 /* Tab.swift in Sources */,
+				08398843246000DB008F2656 /* SessionStore.swift in Sources */,
+				08CDF3D52444D1C70015732A /* SessionCellView.swift in Sources */,
+				08CDF3D82444D7760015732A /* LocalStorage.swift in Sources */,
+				085A91E42459DE120071B904 /* Tab+CloudKit.swift in Sources */,
+				085A91E12459DDDC0071B904 /* Session+Cloudkit.swift in Sources */,
+				08398823245FD842008F2656 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +430,7 @@
 /* Begin PBXTargetDependency section */
 		08CDF3B5244476160015732A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 08CDF3B1244476160015732A /* SessionRestore Extension */;
+			target = 08CDF3B1244476160015732A /* Session Buddy Extension */;
 			targetProxy = 08CDF3B4244476160015732A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -335,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -389,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -492,7 +662,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08CDF3C9244476160015732A /* Build configuration list for PBXNativeTarget "SessionRestore Extension" */ = {
+		08CDF3C9244476160015732A /* Build configuration list for PBXNativeTarget "Session Buddy Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08CDF3CA244476160015732A /* Debug */,
@@ -501,7 +671,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		08CDF3CD244476160015732A /* Build configuration list for PBXNativeTarget "SessionRestore" */ = {
+		08CDF3CD244476160015732A /* Build configuration list for PBXNativeTarget "Session Buddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08CDF3CE244476160015732A /* Debug */,

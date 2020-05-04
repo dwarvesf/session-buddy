@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SessionRestore.xcodeproj">
+      location = "self:/Users/phucld/Developer/SessionRestore/SessionRestore.xcodeproj">
    </FileRef>
 </Workspace>
