@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Session Buddy Extension</string>
+	<string>Session Buddy</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -42,9 +42,9 @@
 			<key>Identifier</key>
 			<string>Button</string>
 			<key>Image</key>
-			<string>file.png</string>
+			<string>ToolbarItemIcon.pdf</string>
 			<key>Label</key>
-			<string>Your Button</string>
+			<string>Session Buddy</string>
 		</dict>
 		<key>SFSafariWebsiteAccess</key>
 		<dict>
@@ -55,6 +55,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 Dwarves Foundation. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>This is a Safari Extension. You should tell us what your extension does here.</string>
+	<string>Manage, backup, share your Web Sessions</string>
 </dict>
 </plist>

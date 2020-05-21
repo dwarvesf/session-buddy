@@ -9,16 +9,19 @@
 import SafariServices
 
 class DetailViewController: NSViewController {
-
+    
     @IBOutlet weak var sessionName: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
     @IBOutlet weak var btnAddUrl: NSButton!
     @IBOutlet weak var containerEditview: NSView!
     @IBOutlet weak var txtfieldURL: NSTextField!
+    @IBOutlet weak var btnAdd: NSButton!
     
-    @IBOutlet weak var viewContainerFunctions: NSView!
-    @IBOutlet weak var viewContainerConstaintHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerViewActions: NSStackView!
+    @IBOutlet weak var containerViewActionInput: NSView!
+    @IBOutlet weak var btnAction: NSButton!
+    @IBOutlet weak var txtfieldAction: NSTextField!
     
     private var onNavigationBack: ((_ shouldReload: Bool) -> Void)?
     private var onOpenSession: (() -> Void)?
@@ -44,6 +47,9 @@ class DetailViewController: NSViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        txtfieldURL.delegate = self
+        txtfieldAction.delegate = self
     }
     
     func set(sessionName: String,
@@ -65,14 +71,79 @@ class DetailViewController: NSViewController {
         self.onOpenSession?()
     }
     
-    @IBAction func triggerMultiFunc(_ sender: Any) {
-        isMultiFuncViewShowing.toggle()
+    @IBAction func closeActionInput(_ sender: Any) {
+        containerViewActionInput.isHidden = true
+        containerViewActions.isHidden = false
+        txtfieldAction.stringValue = ""
+    }
+    
+    @IBAction func triggerRenameInput(_ sender: Any) {
+        btnAction.title = "Rename"
+        btnAction.isEnabled = true
+        containerViewActionInput.isHidden = false
+        containerViewActions.isHidden = true
         
-        DispatchQueue.main.async {
-            NSAnimationContext.runAnimationGroup({ context  in
-                context.duration = 0.25
-                self.viewContainerConstaintHeight.animator().constant = self.isMultiFuncViewShowing ? 20 : 0
-            }) { self.viewContainerConstaintHeight.constant = self.isMultiFuncViewShowing ? 20 : 0 }
+        txtfieldAction.stringValue = session.title
+        txtfieldAction.becomeFirstResponder()
+    }
+    
+    @IBAction func triggerShareInput(_ sender: Any) {
+        btnAction.title = "Share"
+        btnAction.isEnabled = false
+        containerViewActionInput.isHidden = false
+        containerViewActions.isHidden = true
+        txtfieldAction.becomeFirstResponder()
+    }
+    
+    @IBAction func doAction(_ sender: NSButton) {
+        let nameOrEmail = txtfieldAction.stringValue
+        switch sender.title {
+        case "Rename": self.rename(newName: nameOrEmail)
+        case "Share": self.share(with: nameOrEmail)
+        default: break
+        }
+        
+        self.closeActionInput(self)
+    }
+    
+    private func rename(newName: String) {
+        guard
+            !newName.isEmpty,
+            newName != session.title
+            else {return}
+        
+        self.sessionName.stringValue = newName
+        
+        let localSessions = LocalStorage.sessions
+        guard let sessionIndex = localSessions.firstIndex(where: { $0.id == self.session.id }) else {return}
+        
+        LocalStorage.sessions[sessionIndex].title = newName
+        
+        self.shouldReload = true
+    }
+    
+    private func share(with email: String) {
+        do {
+            let jsonEncoder = JSONEncoder()
+            jsonEncoder.outputFormatting = .prettyPrinted
+            let data = try jsonEncoder.encode(ImportExportData(data: [session]))
+            
+            let tempDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileURL = tempDir.appendingPathComponent("\(Date().saveFileStringFormat()).json")
+            
+            try data.write(to: fileURL)
+            
+            let sharingService = NSSharingService(named: .composeEmail)
+            sharingService?.delegate = self
+            
+            sharingService?.recipients = [email]
+            sharingService?.subject = "Sharing my Session Buddy session"
+            let items: [Any] = ["see attachment", fileURL]
+            sharingService?.perform(withItems: items)
+            
+        } catch {
+            NSLog(error.localizedDescription)
+            Util.showErrorDialog(text: "Data is corrupted, please contact us for more support")
         }
     }
     
@@ -98,6 +169,7 @@ class DetailViewController: NSViewController {
                         DispatchQueue.main.async {
                             self.txtfieldURL.stringValue = properties?.url?.absoluteString ?? ""
                             self.txtfieldURL.becomeFirstResponder()
+                            self.btnAdd.isEnabled = !self.txtfieldURL.stringValue.isEmpty
                         }
                     }
                 })
@@ -105,10 +177,15 @@ class DetailViewController: NSViewController {
         }
     }
     
+    @IBAction func cancelAddURL(_ sender: Any) {
+        self.txtfieldURL.stringValue = ""
+        self.containerEditview.isHidden = true
+        self.btnAddUrl.isHidden = false
+    }
     
     @IBAction func addURL(_ sender: Any) {
-        containerEditview.isHidden = true
-        btnAddUrl.isHidden = false
+        self.containerEditview.isHidden = true
+        self.btnAddUrl.isHidden = false
         
         guard !txtfieldURL.stringValue.isEmpty else {return}
         
@@ -120,6 +197,7 @@ class DetailViewController: NSViewController {
             self.tableView.insertRows(at: .init(integer: self.tabs.count - 1), withAnimation: .effectFade)
         }
         
+        self.txtfieldURL.stringValue = ""
         self.shouldReload = true
     }
 }
@@ -139,15 +217,18 @@ extension  DetailViewController: NSTableViewDelegate {
             title: tabs[row].title,
             onDelete: self.onDelete(at: row)
         )
-
+        
         return cell
     }
     
     func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
         guard let url = URL(string: tabs[row].url) else {return true}
         
-        SFSafariApplication.openWindow(with: url)
-        return true
+        SFSafariApplication.getActiveWindow { window in
+            window?.openTab(with: url, makeActiveIfPossible: true, completionHandler: nil)
+        }
+        
+        return false
     }
     
     private func onDelete(at index: Int) -> (() -> Void) {
@@ -174,4 +255,27 @@ extension  DetailViewController: NSTableViewDelegate {
         
         LocalStorage.sessions = localSessions
     }
+}
+
+extension DetailViewController: NSTextFieldDelegate {
+    
+    func controlTextDidChange(_ obj: Notification) {
+        let isBtnActionEnable = !txtfieldAction.stringValue.isEmpty
+        btnAction.isEnabled = isBtnActionEnable
+        
+        let isBtnURlEnable = !txtfieldURL.stringValue.isEmpty
+        btnAdd.isEnabled = isBtnURlEnable
+    }
+}
+
+extension DetailViewController: NSSharingServiceDelegate {
+    //    func sharingServicePicker(_ sharingServicePicker: NSSharingServicePicker, sharingServicesForItems items: [Any], proposedSharingServices proposedServices: [NSSharingService]) -> [NSSharingService] {
+    //
+    //    }
+}
+
+extension DetailViewController: NSSharingServicePickerDelegate {
+    //    func sharingServicePicker(_ sharingServicePicker: NSSharingServicePicker, didChoose service: NSSharingService?) {
+    
+    //    }
 }

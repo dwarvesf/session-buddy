@@ -7,17 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0839881E245FD801008F2656 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0839881D245FD801008F2656 /* SyncEngine.swift */; };
-		0839881F245FD801008F2656 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0839881D245FD801008F2656 /* SyncEngine.swift */; };
+		082069AF246943BC0099FD19 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 082069AD246943B00099FD19 /* ToolbarItemIcon.pdf */; };
+		082069B1246989160099FD19 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082069B0246989160099FD19 /* SidebarView.swift */; };
+		082069B3246A5BDC0099FD19 /* SessionTabCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082069B2246A5BDC0099FD19 /* SessionTabCellView.swift */; };
+		082069B4246A61760099FD19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3AB244476160015732A /* Assets.xcassets */; };
+		082069B9246E55760099FD19 /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082069B7246E55760099FD19 /* ExportViewController.swift */; };
+		082069BA246E55760099FD19 /* ExportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082069B8246E55760099FD19 /* ExportViewController.xib */; };
 		08398822245FD842008F2656 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398821245FD842008F2656 /* Const.swift */; };
 		08398823245FD842008F2656 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398821245FD842008F2656 /* Const.swift */; };
-		08398842246000DB008F2656 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398841246000DB008F2656 /* SessionStore.swift */; };
-		08398843246000DB008F2656 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398841246000DB008F2656 /* SessionStore.swift */; };
-		08398845246003BE008F2656 /* SyncEngine+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398844246003BE008F2656 /* SyncEngine+Notification.swift */; };
-		08398846246003BE008F2656 /* SyncEngine+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398844246003BE008F2656 /* SyncEngine+Notification.swift */; };
 		0839884724600D2E008F2656 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085A91D22457DC870071B904 /* CloudKit.framework */; };
-		0839884D24602FE9008F2656 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0839884C24602FE9008F2656 /* ToolbarItemIcon.pdf */; };
-		0839884F24603149008F2656 /* file.png in Resources */ = {isa = PBXBuildFile; fileRef = 0839884E24603149008F2656 /* file.png */; };
 		085A91C62456E0E10071B904 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91C42456E0E10071B904 /* DetailViewController.swift */; };
 		085A91C72456E0E10071B904 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085A91C52456E0E10071B904 /* DetailViewController.xib */; };
 		085A91D12457420F0071B904 /* TabCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91D02457420F0071B904 /* TabCellView.swift */; };
@@ -26,10 +24,16 @@
 		085A91D72459DC8F0071B904 /* Error+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91D52459DC890071B904 /* Error+CloudKit.swift */; };
 		085A91DD2459DD790071B904 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91DC2459DD790071B904 /* Tab.swift */; };
 		085A91DE2459DD790071B904 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91DC2459DD790071B904 /* Tab.swift */; };
-		085A91E02459DDDC0071B904 /* Session+Cloudkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91DF2459DDDC0071B904 /* Session+Cloudkit.swift */; };
-		085A91E12459DDDC0071B904 /* Session+Cloudkit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91DF2459DDDC0071B904 /* Session+Cloudkit.swift */; };
-		085A91E32459DE120071B904 /* Tab+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91E22459DE120071B904 /* Tab+CloudKit.swift */; };
-		085A91E42459DE120071B904 /* Tab+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91E22459DE120071B904 /* Tab+CloudKit.swift */; };
+		088BE7A32475376100CBF97C /* SearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088BE7A22475376100CBF97C /* SearchCellView.swift */; };
+		089AE1AD2472735E000D1437 /* ImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1AB2472735E000D1437 /* ImportViewController.swift */; };
+		089AE1AE2472735E000D1437 /* ImportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089AE1AC2472735E000D1437 /* ImportViewController.xib */; };
+		089AE1B02472FFFF000D1437 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1AF2472FFFF000D1437 /* Util.swift */; };
+		089AE1B12472FFFF000D1437 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1AF2472FFFF000D1437 /* Util.swift */; };
+		089AE1B3247304C1000D1437 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B2247304C1000D1437 /* Date+Ext.swift */; };
+		089AE1B4247304C1000D1437 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B2247304C1000D1437 /* Date+Ext.swift */; };
+		089AE1B724730EFC000D1437 /* ImportExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B624730EFC000D1437 /* ImportExportData.swift */; };
+		089AE1B824730EFC000D1437 /* ImportExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B624730EFC000D1437 /* ImportExportData.swift */; };
+		089AE1BA247320BB000D1437 /* ExportCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B9247320BB000D1437 /* ExportCellView.swift */; };
 		08CDF3A3244476140015732A /* SessionRestore.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A2244476140015732A /* SessionRestore.entitlements */; };
 		08CDF3A5244476140015732A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3A4244476140015732A /* AppDelegate.swift */; };
 		08CDF3A8244476140015732A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A6244476140015732A /* Main.storyboard */; };
@@ -41,7 +45,6 @@
 		08CDF3BD244476160015732A /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3BC244476160015732A /* SafariExtensionViewController.swift */; };
 		08CDF3C0244476160015732A /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3BE244476160015732A /* SafariExtensionViewController.xib */; };
 		08CDF3C3244476160015732A /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3C2244476160015732A /* script.js */; };
-		08CDF3C5244476160015732A /* ToolbarItemIcon1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3C4244476160015732A /* ToolbarItemIcon1.pdf */; };
 		08CDF3D22444B7790015732A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D12444B7780015732A /* Session.swift */; };
 		08CDF3D32444B7790015732A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D12444B7780015732A /* Session.swift */; };
 		08CDF3D52444D1C70015732A /* SessionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D42444D1C70015732A /* SessionCellView.swift */; };
@@ -74,20 +77,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0839881D245FD801008F2656 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		082069AD246943B00099FD19 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		082069B0246989160099FD19 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		082069B2246A5BDC0099FD19 /* SessionTabCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTabCellView.swift; sourceTree = "<group>"; };
+		082069B7246E55760099FD19 /* ExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
+		082069B8246E55760099FD19 /* ExportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExportViewController.xib; sourceTree = "<group>"; };
 		08398821245FD842008F2656 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		08398841246000DB008F2656 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
-		08398844246003BE008F2656 /* SyncEngine+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SyncEngine+Notification.swift"; sourceTree = "<group>"; };
-		0839884C24602FE9008F2656 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
-		0839884E24603149008F2656 /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file.png; sourceTree = "<group>"; };
 		085A91C42456E0E10071B904 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		085A91C52456E0E10071B904 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		085A91D02457420F0071B904 /* TabCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCellView.swift; sourceTree = "<group>"; };
 		085A91D22457DC870071B904 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		085A91D52459DC890071B904 /* Error+CloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+CloudKit.swift"; sourceTree = "<group>"; };
 		085A91DC2459DD790071B904 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
-		085A91DF2459DDDC0071B904 /* Session+Cloudkit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+Cloudkit.swift"; sourceTree = "<group>"; };
-		085A91E22459DE120071B904 /* Tab+CloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+CloudKit.swift"; sourceTree = "<group>"; };
+		088BE7A22475376100CBF97C /* SearchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellView.swift; sourceTree = "<group>"; };
+		089AE1AB2472735E000D1437 /* ImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewController.swift; sourceTree = "<group>"; };
+		089AE1AC2472735E000D1437 /* ImportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImportViewController.xib; sourceTree = "<group>"; };
+		089AE1AF2472FFFF000D1437 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		089AE1B2247304C1000D1437 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		089AE1B624730EFC000D1437 /* ImportExportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportData.swift; sourceTree = "<group>"; };
+		089AE1B9247320BB000D1437 /* ExportCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCellView.swift; sourceTree = "<group>"; };
 		08CDF39F244476140015732A /* Session Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Session Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CDF3A2244476140015732A /* SessionRestore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionRestore.entitlements; sourceTree = "<group>"; };
 		08CDF3A4244476140015732A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +110,6 @@
 		08CDF3BF244476160015732A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		08CDF3C1244476160015732A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08CDF3C2244476160015732A /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		08CDF3C4244476160015732A /* ToolbarItemIcon1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon1.pdf; sourceTree = "<group>"; };
 		08CDF3C6244476160015732A /* SessionRestore_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionRestore_Extension.entitlements; sourceTree = "<group>"; };
 		08CDF3D12444B7780015732A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		08CDF3D42444D1C70015732A /* SessionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCellView.swift; sourceTree = "<group>"; };
@@ -130,10 +137,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082069B5246E55550099FD19 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				082069B7246E55760099FD19 /* ExportViewController.swift */,
+				082069B8246E55760099FD19 /* ExportViewController.xib */,
+				089AE1B9247320BB000D1437 /* ExportCellView.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		082069B6246E555B0099FD19 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				089AE1AB2472735E000D1437 /* ImportViewController.swift */,
+				089AE1AC2472735E000D1437 /* ImportViewController.xib */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
 		08398820245FD833008F2656 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				08398821245FD842008F2656 /* Const.swift */,
+				089AE1AF2472FFFF000D1437 /* Util.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -144,6 +171,8 @@
 				08CDF3D42444D1C70015732A /* SessionCellView.swift */,
 				08CDF3BC244476160015732A /* SafariExtensionViewController.swift */,
 				08CDF3BE244476160015732A /* SafariExtensionViewController.xib */,
+				082069B2246A5BDC0099FD19 /* SessionTabCellView.swift */,
+				088BE7A22475376100CBF97C /* SearchCellView.swift */,
 			);
 			path = SessionListView;
 			sourceTree = "<group>";
@@ -161,6 +190,8 @@
 		085A91CF24573E590071B904 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				082069B6246E555B0099FD19 /* Import */,
+				082069B5246E55550099FD19 /* Export */,
 				085A91CB24573E190071B904 /* SessionListView */,
 				085A91CD24573E400071B904 /* DetailView */,
 			);
@@ -171,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				085A91D52459DC890071B904 /* Error+CloudKit.swift */,
+				089AE1B2247304C1000D1437 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -178,27 +210,17 @@
 		085A91D82459DCB00071B904 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				089AE1B524730EF0000D1437 /* ImportExport */,
 				085A91DB2459DD5F0071B904 /* Tab */,
 				085A91DA2459DD590071B904 /* Session */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		085A91D92459DD0A0071B904 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				0839881D245FD801008F2656 /* SyncEngine.swift */,
-				08398841246000DB008F2656 /* SessionStore.swift */,
-				08398844246003BE008F2656 /* SyncEngine+Notification.swift */,
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
 		085A91DA2459DD590071B904 /* Session */ = {
 			isa = PBXGroup;
 			children = (
 				08CDF3D12444B7780015732A /* Session.swift */,
-				085A91DF2459DDDC0071B904 /* Session+Cloudkit.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -207,9 +229,16 @@
 			isa = PBXGroup;
 			children = (
 				085A91DC2459DD790071B904 /* Tab.swift */,
-				085A91E22459DE120071B904 /* Tab+CloudKit.swift */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		089AE1B524730EF0000D1437 /* ImportExport */ = {
+			isa = PBXGroup;
+			children = (
+				089AE1B624730EFC000D1437 /* ImportExportData.swift */,
+			);
+			path = ImportExport;
 			sourceTree = "<group>";
 		};
 		08CDF396244476140015732A = {
@@ -260,11 +289,10 @@
 				08CDF3BA244476160015732A /* SafariExtensionHandler.swift */,
 				085A91CF24573E590071B904 /* Views */,
 				08CDF3C1244476160015732A /* Info.plist */,
-				0839884C24602FE9008F2656 /* ToolbarItemIcon.pdf */,
-				0839884E24603149008F2656 /* file.png */,
 				08CDF3C2244476160015732A /* script.js */,
-				08CDF3C4244476160015732A /* ToolbarItemIcon1.pdf */,
+				082069AD246943B00099FD19 /* ToolbarItemIcon.pdf */,
 				08CDF3C6244476160015732A /* SessionRestore_Extension.entitlements */,
+				082069B0246989160099FD19 /* SidebarView.swift */,
 			);
 			path = "SessionRestore Extension";
 			sourceTree = "<group>";
@@ -273,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				08398820245FD833008F2656 /* Utils */,
-				085A91D92459DD0A0071B904 /* Storage */,
 				085A91D82459DCB00071B904 /* Models */,
 				085A91D42459DC6A0071B904 /* Extensions */,
 				08CDF3D62444D7760015732A /* LocalStorage.swift */,
@@ -372,12 +399,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0839884D24602FE9008F2656 /* ToolbarItemIcon.pdf in Resources */,
-				08CDF3C5244476160015732A /* ToolbarItemIcon1.pdf in Resources */,
+				082069BA246E55760099FD19 /* ExportViewController.xib in Resources */,
+				089AE1AE2472735E000D1437 /* ImportViewController.xib in Resources */,
+				082069AF246943BC0099FD19 /* ToolbarItemIcon.pdf in Resources */,
 				08CDF3C0244476160015732A /* SafariExtensionViewController.xib in Resources */,
 				08CDF3C3244476160015732A /* script.js in Resources */,
 				085A91C72456E0E10071B904 /* DetailViewController.xib in Resources */,
-				0839884F24603149008F2656 /* file.png in Resources */,
+				082069B4246A61760099FD19 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,14 +419,12 @@
 				08CDF3AA244476140015732A /* ViewController.swift in Sources */,
 				08CDF3D72444D7760015732A /* LocalStorage.swift in Sources */,
 				08CDF3D22444B7790015732A /* Session.swift in Sources */,
-				085A91E02459DDDC0071B904 /* Session+Cloudkit.swift in Sources */,
 				085A91DD2459DD790071B904 /* Tab.swift in Sources */,
+				089AE1B724730EFC000D1437 /* ImportExportData.swift in Sources */,
+				089AE1B3247304C1000D1437 /* Date+Ext.swift in Sources */,
 				085A91D72459DC8F0071B904 /* Error+CloudKit.swift in Sources */,
-				085A91E32459DE120071B904 /* Tab+CloudKit.swift in Sources */,
+				089AE1B02472FFFF000D1437 /* Util.swift in Sources */,
 				08CDF3A5244476140015732A /* AppDelegate.swift in Sources */,
-				0839881E245FD801008F2656 /* SyncEngine.swift in Sources */,
-				08398845246003BE008F2656 /* SyncEngine+Notification.swift in Sources */,
-				08398842246000DB008F2656 /* SessionStore.swift in Sources */,
 				08398822245FD842008F2656 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,21 +433,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08398846246003BE008F2656 /* SyncEngine+Notification.swift in Sources */,
+				088BE7A32475376100CBF97C /* SearchCellView.swift in Sources */,
+				082069B1246989160099FD19 /* SidebarView.swift in Sources */,
+				082069B9246E55760099FD19 /* ExportViewController.swift in Sources */,
 				085A91D12457420F0071B904 /* TabCellView.swift in Sources */,
+				089AE1B12472FFFF000D1437 /* Util.swift in Sources */,
 				08CDF3BD244476160015732A /* SafariExtensionViewController.swift in Sources */,
-				0839881F245FD801008F2656 /* SyncEngine.swift in Sources */,
 				08CDF3D32444B7790015732A /* Session.swift in Sources */,
+				089AE1AD2472735E000D1437 /* ImportViewController.swift in Sources */,
 				085A91D62459DC890071B904 /* Error+CloudKit.swift in Sources */,
 				08CDF3BB244476160015732A /* SafariExtensionHandler.swift in Sources */,
 				085A91C62456E0E10071B904 /* DetailViewController.swift in Sources */,
+				089AE1B824730EFC000D1437 /* ImportExportData.swift in Sources */,
 				085A91DE2459DD790071B904 /* Tab.swift in Sources */,
-				08398843246000DB008F2656 /* SessionStore.swift in Sources */,
 				08CDF3D52444D1C70015732A /* SessionCellView.swift in Sources */,
+				082069B3246A5BDC0099FD19 /* SessionTabCellView.swift in Sources */,
 				08CDF3D82444D7760015732A /* LocalStorage.swift in Sources */,
-				085A91E42459DE120071B904 /* Tab+CloudKit.swift in Sources */,
-				085A91E12459DDDC0071B904 /* Session+Cloudkit.swift in Sources */,
+				089AE1B4247304C1000D1437 /* Date+Ext.swift in Sources */,
 				08398823245FD842008F2656 /* Const.swift in Sources */,
+				089AE1BA247320BB000D1437 /* ExportCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -559,7 +589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
