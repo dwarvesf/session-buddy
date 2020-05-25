@@ -34,7 +34,7 @@
 		089AE1B724730EFC000D1437 /* ImportExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B624730EFC000D1437 /* ImportExportData.swift */; };
 		089AE1B824730EFC000D1437 /* ImportExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B624730EFC000D1437 /* ImportExportData.swift */; };
 		089AE1BA247320BB000D1437 /* ExportCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B9247320BB000D1437 /* ExportCellView.swift */; };
-		08CDF3A3244476140015732A /* SessionRestore.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A2244476140015732A /* SessionRestore.entitlements */; };
+		08CDF3A3244476140015732A /* SessionBuddy.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A2244476140015732A /* SessionBuddy.entitlements */; };
 		08CDF3A5244476140015732A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3A4244476140015732A /* AppDelegate.swift */; };
 		08CDF3A8244476140015732A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A6244476140015732A /* Main.storyboard */; };
 		08CDF3AA244476140015732A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3A9244476140015732A /* ViewController.swift */; };
@@ -97,7 +97,7 @@
 		089AE1B624730EFC000D1437 /* ImportExportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportData.swift; sourceTree = "<group>"; };
 		089AE1B9247320BB000D1437 /* ExportCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCellView.swift; sourceTree = "<group>"; };
 		08CDF39F244476140015732A /* Session Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Session Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		08CDF3A2244476140015732A /* SessionRestore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionRestore.entitlements; sourceTree = "<group>"; };
+		08CDF3A2244476140015732A /* SessionBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionBuddy.entitlements; sourceTree = "<group>"; };
 		08CDF3A4244476140015732A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08CDF3A7244476140015732A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08CDF3A9244476140015732A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		08CDF3BF244476160015732A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		08CDF3C1244476160015732A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08CDF3C2244476160015732A /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		08CDF3C6244476160015732A /* SessionRestore_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionRestore_Extension.entitlements; sourceTree = "<group>"; };
+		08CDF3C6244476160015732A /* SessionBuddy_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionBuddy_Extension.entitlements; sourceTree = "<group>"; };
 		08CDF3D12444B7780015732A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		08CDF3D42444D1C70015732A /* SessionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCellView.swift; sourceTree = "<group>"; };
 		08CDF3D62444D7760015732A /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
@@ -245,8 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				08CDF3D02444B75C0015732A /* Share */,
-				08CDF3A1244476140015732A /* SessionRestore */,
-				08CDF3B9244476160015732A /* SessionRestore Extension */,
+				08CDF3A1244476140015732A /* SessionBuddy */,
+				08CDF3B9244476160015732A /* SessionBuddy Extension */,
 				08CDF3B6244476160015732A /* Frameworks */,
 				08CDF3A0244476140015732A /* Products */,
 			);
@@ -261,17 +261,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		08CDF3A1244476140015732A /* SessionRestore */ = {
+		08CDF3A1244476140015732A /* SessionBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				08CDF3A2244476140015732A /* SessionRestore.entitlements */,
+				08CDF3A2244476140015732A /* SessionBuddy.entitlements */,
 				08CDF3A4244476140015732A /* AppDelegate.swift */,
 				08CDF3A6244476140015732A /* Main.storyboard */,
 				08CDF3A9244476140015732A /* ViewController.swift */,
 				08CDF3AB244476160015732A /* Assets.xcassets */,
 				08CDF3AD244476160015732A /* Info.plist */,
 			);
-			path = SessionRestore;
+			path = SessionBuddy;
 			sourceTree = "<group>";
 		};
 		08CDF3B6244476160015732A /* Frameworks */ = {
@@ -283,7 +283,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		08CDF3B9244476160015732A /* SessionRestore Extension */ = {
+		08CDF3B9244476160015732A /* SessionBuddy Extension */ = {
 			isa = PBXGroup;
 			children = (
 				08CDF3BA244476160015732A /* SafariExtensionHandler.swift */,
@@ -291,10 +291,10 @@
 				08CDF3C1244476160015732A /* Info.plist */,
 				08CDF3C2244476160015732A /* script.js */,
 				082069AD246943B00099FD19 /* ToolbarItemIcon.pdf */,
-				08CDF3C6244476160015732A /* SessionRestore_Extension.entitlements */,
+				08CDF3C6244476160015732A /* SessionBuddy_Extension.entitlements */,
 				082069B0246989160099FD19 /* SidebarView.swift */,
 			);
-			path = "SessionRestore Extension";
+			path = "SessionBuddy Extension";
 			sourceTree = "<group>";
 		};
 		08CDF3D02444B75C0015732A /* Share */ = {
@@ -365,7 +365,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 08CDF39A244476140015732A /* Build configuration list for PBXProject "SessionRestore" */;
+			buildConfigurationList = 08CDF39A244476140015732A /* Build configuration list for PBXProject "SessionBuddy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -389,7 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08CDF3A3244476140015732A /* SessionRestore.entitlements in Resources */,
+				08CDF3A3244476140015732A /* SessionBuddy.entitlements in Resources */,
 				08CDF3AC244476160015732A /* Assets.xcassets in Resources */,
 				08CDF3A8244476140015732A /* Main.storyboard in Resources */,
 			);
@@ -601,11 +601,11 @@
 		08CDF3CA244476160015732A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "SessionRestore Extension/SessionRestore_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "SessionBuddy Extension/SessionBuddy_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "SessionRestore Extension/Info.plist";
+				INFOPLIST_FILE = "SessionBuddy Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -621,11 +621,11 @@
 		08CDF3CB244476160015732A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "SessionRestore Extension/SessionRestore_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "SessionBuddy Extension/SessionBuddy_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "SessionRestore Extension/Info.plist";
+				INFOPLIST_FILE = "SessionBuddy Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -643,12 +643,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SessionRestore/SessionRestore.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SessionBuddy/SessionBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = SessionRestore/Info.plist;
+				INFOPLIST_FILE = SessionBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -664,12 +665,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SessionRestore/SessionRestore.entitlements;
+				CODE_SIGN_ENTITLEMENTS = SessionBuddy/SessionBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = SessionRestore/Info.plist;
+				INFOPLIST_FILE = SessionBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -683,7 +685,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		08CDF39A244476140015732A /* Build configuration list for PBXProject "SessionRestore" */ = {
+		08CDF39A244476140015732A /* Build configuration list for PBXProject "SessionBuddy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				08CDF3C7244476160015732A /* Debug */,
