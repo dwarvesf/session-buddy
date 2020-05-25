@@ -17,6 +17,7 @@ struct Session: Codable {
     let id: String
     var title: String
     var tabs: [Tab]
+    var isBackup: Bool = false
     
     /// Used to store the encoded `CKRecord.ID` so that local records can be matched with
     /// records on the server. This ensures updates don't cause duplication of records.

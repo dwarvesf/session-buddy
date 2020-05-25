@@ -16,6 +16,8 @@
 		08398822245FD842008F2656 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398821245FD842008F2656 /* Const.swift */; };
 		08398823245FD842008F2656 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08398821245FD842008F2656 /* Const.swift */; };
 		0839884724600D2E008F2656 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085A91D22457DC870071B904 /* CloudKit.framework */; };
+		0851B309247BCC1C0047CB83 /* Sequence+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851B308247BCC1C0047CB83 /* Sequence+Ext.swift */; };
+		0851B30A247BCC1C0047CB83 /* Sequence+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0851B308247BCC1C0047CB83 /* Sequence+Ext.swift */; };
 		085A91C62456E0E10071B904 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91C42456E0E10071B904 /* DetailViewController.swift */; };
 		085A91C72456E0E10071B904 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085A91C52456E0E10071B904 /* DetailViewController.xib */; };
 		085A91D12457420F0071B904 /* TabCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A91D02457420F0071B904 /* TabCellView.swift */; };
@@ -83,6 +85,7 @@
 		082069B7246E55760099FD19 /* ExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
 		082069B8246E55760099FD19 /* ExportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExportViewController.xib; sourceTree = "<group>"; };
 		08398821245FD842008F2656 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		0851B308247BCC1C0047CB83 /* Sequence+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Ext.swift"; sourceTree = "<group>"; };
 		085A91C42456E0E10071B904 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		085A91C52456E0E10071B904 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		085A91D02457420F0071B904 /* TabCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCellView.swift; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 			children = (
 				085A91D52459DC890071B904 /* Error+CloudKit.swift */,
 				089AE1B2247304C1000D1437 /* Date+Ext.swift */,
+				0851B308247BCC1C0047CB83 /* Sequence+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -426,6 +430,7 @@
 				089AE1B02472FFFF000D1437 /* Util.swift in Sources */,
 				08CDF3A5244476140015732A /* AppDelegate.swift in Sources */,
 				08398822245FD842008F2656 /* Const.swift in Sources */,
+				0851B309247BCC1C0047CB83 /* Sequence+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +440,7 @@
 			files = (
 				088BE7A32475376100CBF97C /* SearchCellView.swift in Sources */,
 				082069B1246989160099FD19 /* SidebarView.swift in Sources */,
+				0851B30A247BCC1C0047CB83 /* Sequence+Ext.swift in Sources */,
 				082069B9246E55760099FD19 /* ExportViewController.swift in Sources */,
 				085A91D12457420F0071B904 /* TabCellView.swift in Sources */,
 				089AE1B12472FFFF000D1437 /* Util.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Tab: Codable {
+struct Tab: Codable, Hashable {
     
     // DON'T DO THIS
     // let id = UUID().uuidString
@@ -19,6 +19,14 @@ struct Tab: Codable {
     var title: String
     var url: String
     
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(url)
+    }
+    
+    static func == (lhs: Tab, rhs: Tab) -> Bool {
+        return lhs.url == rhs.url
+    }
+
     /// Used to store the encoded `CKRecord.ID` so that local records can be matched with
     /// records on the server. This ensures updates don't cause duplication of records.
     var ckData: Data? = nil

@@ -234,6 +234,7 @@ extension SafariExtensionViewController: NSOutlineViewDelegate {
     private func onUpdateSession(at index: Int) -> ((String)->Void) {
         return  { newSessionName in
             LocalStorage.sessions[index].title = newSessionName
+            LocalStorage.sessions[index].isBackup = false
         }
     }
     
