@@ -11,7 +11,6 @@ import Foundation
 extension UserDefaults {
     enum Key {
         static let sessions = "sessions"
-        static let backupTabs = "backupTabs"
     }
 }
 
@@ -27,21 +26,6 @@ enum LocalStorage {
             UserDefaults.standard.set(data, forKey: UserDefaults.Key.sessions)
         }
     }
-    
-    static var backupTabs: Set<Tab> {
-           get {
-            guard let data = UserDefaults.standard.value(forKey: UserDefaults.Key.backupTabs) as? Data,
-                let tabs = try? JSONDecoder().decode(Set<Tab>.self, from: data)
-                else { return Set() }
-            
-               return tabs
-           }
-           
-           set {
-               let data = try? JSONEncoder().encode(newValue)
-               UserDefaults.standard.set(data, forKey: UserDefaults.Key.backupTabs)
-           }
-       }
 }
 
 extension Session {

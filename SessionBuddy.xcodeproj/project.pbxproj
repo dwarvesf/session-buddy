@@ -36,6 +36,8 @@
 		089AE1B724730EFC000D1437 /* ImportExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B624730EFC000D1437 /* ImportExportData.swift */; };
 		089AE1B824730EFC000D1437 /* ImportExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B624730EFC000D1437 /* ImportExportData.swift */; };
 		089AE1BA247320BB000D1437 /* ExportCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B9247320BB000D1437 /* ExportCellView.swift */; };
+		089D91FA24802FFA0001D6F2 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D91F924802FF90001D6F2 /* LocalStorage.swift */; };
+		089D91FB24802FFA0001D6F2 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D91F924802FF90001D6F2 /* LocalStorage.swift */; };
 		08CDF3A3244476140015732A /* SessionBuddy.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A2244476140015732A /* SessionBuddy.entitlements */; };
 		08CDF3A5244476140015732A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3A4244476140015732A /* AppDelegate.swift */; };
 		08CDF3A8244476140015732A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A6244476140015732A /* Main.storyboard */; };
@@ -50,8 +52,6 @@
 		08CDF3D22444B7790015732A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D12444B7780015732A /* Session.swift */; };
 		08CDF3D32444B7790015732A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D12444B7780015732A /* Session.swift */; };
 		08CDF3D52444D1C70015732A /* SessionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D42444D1C70015732A /* SessionCellView.swift */; };
-		08CDF3D72444D7760015732A /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D62444D7760015732A /* LocalStorage.swift */; };
-		08CDF3D82444D7760015732A /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3D62444D7760015732A /* LocalStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +99,7 @@
 		089AE1B2247304C1000D1437 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		089AE1B624730EFC000D1437 /* ImportExportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportData.swift; sourceTree = "<group>"; };
 		089AE1B9247320BB000D1437 /* ExportCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCellView.swift; sourceTree = "<group>"; };
+		089D91F924802FF90001D6F2 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalStorage.swift; path = Storage/LocalStorage.swift; sourceTree = "<group>"; };
 		08CDF39F244476140015732A /* Session Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Session Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CDF3A2244476140015732A /* SessionBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionBuddy.entitlements; sourceTree = "<group>"; };
 		08CDF3A4244476140015732A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		08CDF3C6244476160015732A /* SessionBuddy_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionBuddy_Extension.entitlements; sourceTree = "<group>"; };
 		08CDF3D12444B7780015732A /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		08CDF3D42444D1C70015732A /* SessionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCellView.swift; sourceTree = "<group>"; };
-		08CDF3D62444D7760015732A /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,10 +304,10 @@
 		08CDF3D02444B75C0015732A /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				089D91F924802FF90001D6F2 /* LocalStorage.swift */,
 				08398820245FD833008F2656 /* Utils */,
 				085A91D82459DCB00071B904 /* Models */,
 				085A91D42459DC6A0071B904 /* Extensions */,
-				08CDF3D62444D7760015732A /* LocalStorage.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -420,8 +420,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089D91FA24802FFA0001D6F2 /* LocalStorage.swift in Sources */,
 				08CDF3AA244476140015732A /* ViewController.swift in Sources */,
-				08CDF3D72444D7760015732A /* LocalStorage.swift in Sources */,
 				08CDF3D22444B7790015732A /* Session.swift in Sources */,
 				085A91DD2459DD790071B904 /* Tab.swift in Sources */,
 				089AE1B724730EFC000D1437 /* ImportExportData.swift in Sources */,
@@ -439,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				088BE7A32475376100CBF97C /* SearchCellView.swift in Sources */,
+				089D91FB24802FFA0001D6F2 /* LocalStorage.swift in Sources */,
 				082069B1246989160099FD19 /* SidebarView.swift in Sources */,
 				0851B30A247BCC1C0047CB83 /* Sequence+Ext.swift in Sources */,
 				082069B9246E55760099FD19 /* ExportViewController.swift in Sources */,
@@ -454,7 +455,6 @@
 				085A91DE2459DD790071B904 /* Tab.swift in Sources */,
 				08CDF3D52444D1C70015732A /* SessionCellView.swift in Sources */,
 				082069B3246A5BDC0099FD19 /* SessionTabCellView.swift in Sources */,
-				08CDF3D82444D7760015732A /* LocalStorage.swift in Sources */,
 				089AE1B4247304C1000D1437 /* Date+Ext.swift in Sources */,
 				08398823245FD842008F2656 /* Const.swift in Sources */,
 				089AE1BA247320BB000D1437 /* ExportCellView.swift in Sources */,
@@ -617,7 +617,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "foundation.dwarves.SessionRestore-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.sessionbuddy.sfextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -637,7 +637,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "foundation.dwarves.SessionRestore-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.sessionbuddy.sfextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -660,7 +660,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.SessionRestore;
+				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.sessionbuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -682,7 +682,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.SessionRestore;
+				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.sessionbuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
