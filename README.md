@@ -24,7 +24,7 @@ A ultra-light Safari extension helps you save open tabs as collections that can 
 
 ###  App Store
 
-*On the way*
+[![AppStore](misc/appstore.svg)](https://apps.apple.com/us/app/session-buddy/id1515213004)
 
 ### Others
 
