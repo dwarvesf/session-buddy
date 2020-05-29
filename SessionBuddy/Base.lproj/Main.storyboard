@@ -108,7 +108,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="img_guide" id="Hhb-TZ-Dhg"/>
                             </imageView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" id="ooh-eV-eLQ">
+                            <button verticalHuggingPriority="750" id="ooh-eV-eLQ">
                                 <rect key="frame" x="28" y="209" width="282" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
@@ -122,7 +122,7 @@ DQ
                                     </connections>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" id="btW-jI-IeD">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="btW-jI-IeD">
                                 <rect key="frame" x="32" y="272" width="346" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" title="Check the box next to Session Buddy in your Safari Preferences" id="l3j-FF-qkF">

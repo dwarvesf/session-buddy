@@ -68,12 +68,12 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     
     @objc
     private func showAbout() {
-        openWeb(url: URL(string: "https://superbits.co")!)
+        openWeb(url: URL(string: "https://github.com/dwarvesf/session-buddy")!)
     }
     
     @objc
     private func showHelp() {
-        openWeb(url: URL(string: "https://superbits.co")!)
+        openWeb(url: URL(string: "https://github.com/dwarvesf/session-buddy/issues")!)
     }
     
     @IBAction func openContextMenu(_ sender: NSButton) {

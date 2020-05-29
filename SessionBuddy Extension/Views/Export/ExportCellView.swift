@@ -10,6 +10,7 @@ import Cocoa
 
 class ExportCellView: NSTableCellView {
     @IBOutlet weak var checkBox: NSButton?
+    @IBOutlet weak var lblTitle: NSTextField?
     
     var isSelectedChanged: ((Bool) -> Void)?
     
@@ -24,7 +25,7 @@ class ExportCellView: NSTableCellView {
         isChecked: Bool,
         isSelectedChanged: @escaping ((Bool) -> Void)
     ) {
-        self.checkBox?.title = "􀈕 \(title)"
+        self.lblTitle?.stringValue = title
         self.checkBox?.state = isChecked ? .on : .off
         self.isSelectedChanged = isSelectedChanged
     }

@@ -48,9 +48,25 @@
                                                 <rect key="frame" x="1" y="1" width="341" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rcn-kY-YR9">
+                                                        <rect key="frame" x="28" y="6" width="18" height="18"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="18" id="Hm1-Jn-zPe"/>
+                                                            <constraint firstAttribute="height" constant="18" id="Z3B-qj-nPW"/>
+                                                        </constraints>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_folder" id="nfy-Tb-ntX"/>
+                                                    </imageView>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kvc-Ct-7ls">
+                                                        <rect key="frame" x="48" y="7" width="36" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Work" id="eWC-10-Cnz">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-Cm-fmn">
                                                         <rect key="frame" x="6" y="6" width="329" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="􀈕 Work" bezelStyle="regularSquare" imagePosition="left" inset="2" id="EoZ-Kg-1fu">
+                                                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="EoZ-Kg-1fu">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -60,13 +76,19 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="oBd-Cm-fmn" secondAttribute="trailing" constant="8" id="7uB-zz-LY4"/>
+                                                    <constraint firstItem="kvc-Ct-7ls" firstAttribute="leading" secondItem="Rcn-kY-YR9" secondAttribute="trailing" constant="4" id="PcJ-Dc-0t6"/>
                                                     <constraint firstAttribute="height" constant="30" id="PcU-hK-nLr"/>
                                                     <constraint firstItem="oBd-Cm-fmn" firstAttribute="centerY" secondItem="sy8-qW-e4c" secondAttribute="centerY" id="RHN-5q-N2l"/>
+                                                    <constraint firstItem="Rcn-kY-YR9" firstAttribute="centerY" secondItem="oBd-Cm-fmn" secondAttribute="centerY" id="SZv-Er-ziR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oBd-Cm-fmn" secondAttribute="trailing" constant="8" id="WFf-XQ-hEx"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kvc-Ct-7ls" secondAttribute="trailing" constant="8" id="XzY-7W-Kaa"/>
                                                     <constraint firstItem="oBd-Cm-fmn" firstAttribute="leading" secondItem="sy8-qW-e4c" secondAttribute="leading" constant="8" id="YsN-j4-jUG"/>
+                                                    <constraint firstItem="Rcn-kY-YR9" firstAttribute="leading" secondItem="sy8-qW-e4c" secondAttribute="leading" constant="28" id="cc6-Hz-hHU"/>
+                                                    <constraint firstItem="kvc-Ct-7ls" firstAttribute="centerY" secondItem="Rcn-kY-YR9" secondAttribute="centerY" id="oaV-3r-s6L"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="checkBox" destination="oBd-Cm-fmn" id="TLA-Vz-Fv3"/>
+                                                    <outlet property="lblTitle" destination="kvc-Ct-7ls" id="pwk-1o-aEv"/>
                                                 </connections>
                                             </tableCellView>
                                         </prototypeCellViews>
@@ -186,5 +208,6 @@
     </objects>
     <resources>
         <image name="NSGoBackTemplate" width="9" height="12"/>
+        <image name="ico_folder" width="15" height="12"/>
     </resources>
 </document>
