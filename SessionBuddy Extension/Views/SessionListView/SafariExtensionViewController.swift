@@ -46,10 +46,29 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         searchBar.delegate = self
         
         viewHeight = self.view.frame.height
+        
+        observeNotifications()
+    }
+    
+    private func observeNotifications() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(reloadSessionTable),
+            name: NSNotification.Name(rawValue: "sessionDidChange"),
+            object: nil)
+    }
+    
+    @objc
+    private func reloadSessionTable() {
+        DispatchQueue.main.async {
+            self.outlineView.reloadData()
+        }
     }
     
     @objc
     private func showImport() {
+     
+
         let child = ImportViewController()
         
         self.push(vc: child)
@@ -60,6 +79,15 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     @objc
     private func showExport() {
         let child = ExportViewController()
+        
+        self.push(vc: child)
+        
+        child.set(onNavigationBack: self.onNavigationBack)
+    }
+    
+    @objc
+    private func showPreferences() {
+        let child = PreferencesViewConttroller()
         
         self.push(vc: child)
         
@@ -79,13 +107,32 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
     @IBAction func openContextMenu(_ sender: NSButton) {
         let menu = NSMenu()
         
-        menu.addItem(withTitle: "Import...", action: #selector(showImport), keyEquivalent: "").target = self
-        menu.addItem(withTitle: "Export...", action: #selector(showExport), keyEquivalent: "").target = self
+        menu.addItem(
+            withTitle: "Import...",
+            action: #selector(showImport),
+            keyEquivalent: "i").target = self
+        
+        menu.addItem(
+            withTitle: "Export...",
+            action: #selector(showExport),
+            keyEquivalent: "x").target = self
         
         menu.addItem(.separator())
         
-        menu.addItem(withTitle: "About", action: #selector(showAbout), keyEquivalent: "").target = self
-        menu.addItem(withTitle: "Help", action: #selector(showHelp), keyEquivalent: "").target = self
+        menu.addItem(
+            withTitle: "Preferences",
+            action: #selector(showPreferences),
+            keyEquivalent: ",").target = self
+        
+        menu.addItem(
+            withTitle: "About",
+            action: #selector(showAbout),
+            keyEquivalent: "").target = self
+        
+        menu.addItem(
+            withTitle: "Help",
+            action: #selector(showHelp),
+            keyEquivalent: "").target = self
         
         menu.popUp(positioning: nil, at: .init(x: 0, y: 26), in: sender)
     }
@@ -100,7 +147,9 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
         searchResult = LocalStorage.sessions
             .map { $0.tabs }
             .flatMap { $0 }
-            .filter { $0.url.lowercased().contains(sender.stringValue.lowercased()) }
+            .filter {
+                $0.url.lowercased().contains(sender.stringValue.lowercased())
+            }
             .map(\.url)
     }
     
@@ -120,10 +169,18 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
                             // Last element
                             if index == tabs.count - 1 {
                                 let title = Date().commonStringFormat()
-                                let newSession = Session(title: title, tabs: sessionTabs)
+                                
+                                let newSession = Session(
+                                    title: title,
+                                    tabs: sessionTabs)
+                                
                                 newSession.save()
                                 DispatchQueue.main.async {
-                                    self.outlineView.insertItems(at: .init(integer: LocalStorage.sessions.count - 1), inParent: nil, withAnimation: .effectFade)
+                                    self.outlineView.insertItems(
+                                        at: .init(integer: LocalStorage.sessions.count - 1),
+                                        inParent: nil,
+                                        withAnimation: .effectFade)
+                                    
                                     self.outlineView.scrollToEndOfDocument(self)
                                 }
                             }
@@ -181,12 +238,18 @@ extension SafariExtensionViewController: NSOutlineViewDelegate {
         return true
     }
     
-    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
+    func outlineView(
+        _ outlineView: NSOutlineView,
+        viewFor tableColumn: NSTableColumn?,
+        item: Any) -> NSView? {
+        
         var view: NSTableCellView?
         
         if let session = item as? Session {
             
-            let sessionCell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "sessionCell"), owner: self) as? SessionCellView
+            let sessionCell = outlineView.makeView(
+                withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "sessionCell"),
+                owner: self) as? SessionCellView
             
             let row = outlineView.row(forItem: item)
             
@@ -194,6 +257,7 @@ extension SafariExtensionViewController: NSOutlineViewDelegate {
                 title: session.title,
                 tabCount: session.tabs.count,
                 onDetailClick: onDetailClick(at: row),
+                onShareSession: onShareSession(at: row),
                 onRestoreSession: onRestore(at: row),
                 onUpdateSession: onUpdateSession(at: row))
             
@@ -202,7 +266,9 @@ extension SafariExtensionViewController: NSOutlineViewDelegate {
         }
         
         if let tab = item as? Tab {
-            let tabCell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "sessionTabCell"), owner: self) as? SessionTabCellView
+            let tabCell = outlineView.makeView(
+                withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "sessionTabCell"),
+                owner: self) as? SessionTabCellView
             
             tabCell?.set(title: tab.title)
             
@@ -252,6 +318,36 @@ extension SafariExtensionViewController: NSOutlineViewDelegate {
         }
     }
     
+    private func onShareSession(at index: Int) -> (() -> Void) {
+        return {
+            
+            let to = "receiver@email.com"
+            
+            let session = LocalStorage.sessions[index]
+            
+            let jsonEncoder = JSONEncoder()
+            jsonEncoder.outputFormatting = .prettyPrinted
+                
+            guard
+                let subjectEncoded = "[Session Buddy] Share my session".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+                let bodyEncodedData = try? jsonEncoder.encode(session),
+                var body = String(data: bodyEncodedData, encoding: .utf8)
+                else {return}
+            
+            body = """
+            Please copy the content below and save it as file.json to import in Session Buddy
+            
+            \(body)
+            """
+            guard
+                let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .alphanumerics),
+                let defaultUrl = URL(string: "mailto:\(to)?subject=\(subjectEncoded)&body=\(bodyEncoded)")
+            else {return}
+            
+            NSWorkspace.shared.open(defaultUrl)
+        }
+    }
+    
     private func push(vc: NSViewController) {
         self.addChild(vc)
         self.view.addSubview(vc.view)
@@ -290,9 +386,17 @@ extension SafariExtensionViewController: NSTableViewDataSource {
 
 extension SafariExtensionViewController: NSTableViewDelegate {
     
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "searchCell"), owner: self) as? SearchCellView
+    func tableView(
+        _ tableView: NSTableView,
+        viewFor tableColumn: NSTableColumn?,
+        row: Int) -> NSView? {
+        
+        let cell = tableView.makeView(
+            withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "searchCell"),
+            owner: self) as? SearchCellView
+        
         cell?.set(title: searchResult[row], with: searchBar.stringValue.lowercased())
+        
         return cell
     }
     

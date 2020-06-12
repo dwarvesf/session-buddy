@@ -34,6 +34,8 @@ class DetailViewController: NSViewController {
     
     private var isMultiFuncViewShowing = false
     
+    private var newTabURL: String?
+    
     init(session: Session) {
         self.session = session
         super.init(nibName: "DetailViewController", bundle: Bundle.main)
@@ -82,7 +84,7 @@ class DetailViewController: NSViewController {
         btnAction.isEnabled = true
         containerViewActionInput.isHidden = false
         containerViewActions.isHidden = true
-        
+        txtfieldAction.placeholderString = "Session name"
         txtfieldAction.stringValue = session.title
         txtfieldAction.becomeFirstResponder()
     }
@@ -92,6 +94,7 @@ class DetailViewController: NSViewController {
         btnAction.isEnabled = false
         containerViewActionInput.isHidden = false
         containerViewActions.isHidden = true
+        txtfieldAction.placeholderString = "username@email.com"
         txtfieldAction.becomeFirstResponder()
     }
     
@@ -123,28 +126,30 @@ class DetailViewController: NSViewController {
     }
     
     private func share(with email: String) {
-        do {
-            let jsonEncoder = JSONEncoder()
-            jsonEncoder.outputFormatting = .prettyPrinted
-            let data = try jsonEncoder.encode(ImportExportData(data: [session]))
-            
-            let tempDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            let fileURL = tempDir.appendingPathComponent("\(Date().saveFileStringFormat()).json")
-            
-            try data.write(to: fileURL)
-            
-            let sharingService = NSSharingService(named: .composeEmail)
-            sharingService?.delegate = self
-            
-            sharingService?.recipients = [email]
-            sharingService?.subject = "Sharing my Session Buddy session"
-            let items: [Any] = ["see attachment", fileURL]
-            sharingService?.perform(withItems: items)
-            
-        } catch {
-            NSLog(error.localizedDescription)
-            Util.showErrorDialog(text: "Data is corrupted, please contact us for more support")
-        }
+        guard let session =
+            LocalStorage.sessions.first(where: { $0.id == self.session.id })
+            else {return}
+                
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.outputFormatting = .prettyPrinted
+        
+        guard
+            let subjectEncoded = "[Session Buddy] Share my session".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+            let bodyEncodedData = try? jsonEncoder.encode(session),
+            var body = String(data: bodyEncodedData, encoding: .utf8)
+            else {return}
+        
+        body = """
+        Please copy the content below and save it as file.json to import in Session Buddy
+        
+        \(body)
+        """
+        guard
+            let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .alphanumerics),
+            let defaultUrl = URL(string: "mailto:\(email)?subject=\(subjectEncoded)&body=\(bodyEncoded)")
+            else {return}
+        
+        NSWorkspace.shared.open(defaultUrl)
     }
     
     @IBAction func deleteSession(_ sender: Any) {
@@ -167,9 +172,15 @@ class DetailViewController: NSViewController {
                 tab?.getActivePage(completionHandler: { page in
                     page?.getPropertiesWithCompletionHandler { properties in
                         DispatchQueue.main.async {
-                            self.txtfieldURL.stringValue = properties?.url?.absoluteString ?? ""
+                            guard
+                                let title = properties?.title,
+                                let url = properties?.url
+                                else {return}
+                            
+                            self.txtfieldURL.stringValue = title
                             self.txtfieldURL.becomeFirstResponder()
                             self.btnAdd.isEnabled = !self.txtfieldURL.stringValue.isEmpty
+                            self.newTabURL = url.absoluteString
                         }
                     }
                 })
@@ -187,9 +198,12 @@ class DetailViewController: NSViewController {
         self.containerEditview.isHidden = true
         self.btnAddUrl.isHidden = false
         
-        guard !txtfieldURL.stringValue.isEmpty else {return}
+        guard
+            !txtfieldURL.stringValue.isEmpty,
+            let url = self.newTabURL
+        else {return}
         
-        let newTab = Tab(title: txtfieldURL.stringValue, url: txtfieldURL.stringValue)
+        let newTab = Tab(title: txtfieldURL.stringValue, url: url)
         self.tabs.append(newTab)
         self.updateSession(with: self.tabs)
         
@@ -215,7 +229,7 @@ extension  DetailViewController: NSTableViewDelegate {
         
         cell.set(
             title: tabs[row].title,
-            onDelete: self.onDelete(at: row)
+            onDelete: self.onDelete(id: tabs[row].id)
         )
         
         return cell
@@ -231,13 +245,15 @@ extension  DetailViewController: NSTableViewDelegate {
         return false
     }
     
-    private func onDelete(at index: Int) -> (() -> Void) {
+    private func onDelete(id: String) -> (() -> Void) {
         return {
-            self.tabs.remove(at: index)
+            guard let idx = self.tabs.firstIndex(where: { $0.id == id }) else {return}
+            
+            self.tabs.remove(at: idx)
             self.updateSession(with: self.tabs)
             
             DispatchQueue.main.async {
-                self.tableView.removeRows(at: .init(integer: index), withAnimation: .effectFade)
+                self.tableView.removeRows(at: .init(integer: idx), withAnimation: .effectFade)
             }
             
             self.shouldReload = true

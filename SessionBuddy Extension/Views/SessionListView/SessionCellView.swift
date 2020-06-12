@@ -11,6 +11,7 @@ import Cocoa
 class SessionCellView: NSTableCellView {
     
     private var onDetailClick: (()->Void)?
+    private var onShareSession: (()->Void)?
     private var onRestoreSession: (()->Void)?
     private var onUpdateSession: ((String)->Void)?
     
@@ -29,6 +30,10 @@ class SessionCellView: NSTableCellView {
     // MARK: - Mouse hover
     deinit {
         removeTrackingArea(trackingArea)
+    }
+    
+    override func prepareForReuse() {
+        highlight = false
     }
     
     override func awakeFromNib() {
@@ -70,6 +75,10 @@ class SessionCellView: NSTableCellView {
         onRestoreSession?()
     }
     
+    @IBAction func shareSession(_ sender: Any) {
+        onShareSession?()
+    }
+    
     @IBAction func UpdateSessionName(_ sender: NSTextField) {
         onUpdateSession?(sender.stringValue)
     }
@@ -83,12 +92,14 @@ class SessionCellView: NSTableCellView {
     func set(title: String,
              tabCount: Int,
              onDetailClick: @escaping (() -> Void),
+             onShareSession: @escaping (() -> Void),
              onRestoreSession: @escaping (() -> Void),
              onUpdateSession: @escaping ((String) -> Void)
     ) {
         self.lblName?.stringValue = title
         self.lblTabCount?.stringValue = "\(tabCount) " + (tabCount > 1 ? "tabs" : "tab")
         self.onDetailClick = onDetailClick
+        self.onShareSession = onShareSession
         self.onRestoreSession = onRestoreSession
         self.onUpdateSession = onUpdateSession
     }

@@ -122,7 +122,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g6K-Gs-2IT">
-                    <rect key="frame" x="289.5" y="231" width="47" height="23"/>
+                    <rect key="frame" x="288.5" y="231" width="48" height="23"/>
                     <buttonCell key="cell" type="roundTextured" title="Open" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="YrO-fW-Ucx">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -148,8 +148,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
                     <subviews>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PsF-pz-itA">
-                            <rect key="frame" x="12" y="15" width="80" height="21"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="btn_add_url" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="aTF-kV-soS">
+                            <rect key="frame" x="11.5" y="13" width="110" height="23"/>
+                            <buttonCell key="cell" type="roundTextured" title="Add current tab" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="aTF-kV-soS">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
@@ -162,7 +162,7 @@
                             <subviews>
                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d91-cE-Siu">
                                     <rect key="frame" x="0.0" y="0.0" width="241" height="26"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="jPK-4c-Udx">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Tab title" drawsBackground="YES" id="jPK-4c-Udx">
                                         <font key="font" usesAppearanceFont="YES"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -225,7 +225,7 @@ DQ
                     <rect key="frame" x="8" y="199" width="328" height="20"/>
                     <subviews>
                         <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BnX-HY-53G">
-                            <rect key="frame" x="100" y="0.0" width="128" height="20"/>
+                            <rect key="frame" x="71" y="0.0" width="187" height="20"/>
                             <subviews>
                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qch-bE-GK3">
                                     <rect key="frame" x="0.0" y="0.0" width="67" height="20"/>
@@ -253,8 +253,8 @@ DQ
                                         <action selector="deleteSession:" target="-2" id="CPy-O4-kUM"/>
                                     </connections>
                                 </button>
-                                <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vxU-kA-507">
-                                    <rect key="frame" x="0.0" y="-10" width="51" height="30"/>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vxU-kA-507">
+                                    <rect key="frame" x="136" y="0.0" width="51" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="51" id="YIu-wO-sam"/>
                                     </constraints>
@@ -389,7 +389,6 @@ DQ
         <image name="NSTouchBarComposeTemplate" width="21" height="30"/>
         <image name="NSTouchBarDeleteTemplate" width="15" height="30"/>
         <image name="NSTouchBarShareTemplate" width="15" height="30"/>
-        <image name="btn_add_url" width="80" height="21"/>
         <image name="ico_circle" width="13" height="13"/>
     </resources>
 </document>

@@ -38,6 +38,8 @@
 		089AE1BA247320BB000D1437 /* ExportCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089AE1B9247320BB000D1437 /* ExportCellView.swift */; };
 		089D91FA24802FFA0001D6F2 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D91F924802FF90001D6F2 /* LocalStorage.swift */; };
 		089D91FB24802FFA0001D6F2 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D91F924802FF90001D6F2 /* LocalStorage.swift */; };
+		08B048072492386200D5C6FE /* PreferencesViewConttroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B048052492386200D5C6FE /* PreferencesViewConttroller.swift */; };
+		08B048082492386200D5C6FE /* PreferencesViewConttroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B048062492386200D5C6FE /* PreferencesViewConttroller.xib */; };
 		08CDF3A3244476140015732A /* SessionBuddy.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A2244476140015732A /* SessionBuddy.entitlements */; };
 		08CDF3A5244476140015732A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CDF3A4244476140015732A /* AppDelegate.swift */; };
 		08CDF3A8244476140015732A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08CDF3A6244476140015732A /* Main.storyboard */; };
@@ -100,6 +102,8 @@
 		089AE1B624730EFC000D1437 /* ImportExportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportData.swift; sourceTree = "<group>"; };
 		089AE1B9247320BB000D1437 /* ExportCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCellView.swift; sourceTree = "<group>"; };
 		089D91F924802FF90001D6F2 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalStorage.swift; path = Storage/LocalStorage.swift; sourceTree = "<group>"; };
+		08B048052492386200D5C6FE /* PreferencesViewConttroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewConttroller.swift; sourceTree = "<group>"; };
+		08B048062492386200D5C6FE /* PreferencesViewConttroller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesViewConttroller.xib; sourceTree = "<group>"; };
 		08CDF39F244476140015732A /* Session Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Session Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08CDF3A2244476140015732A /* SessionBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SessionBuddy.entitlements; sourceTree = "<group>"; };
 		08CDF3A4244476140015732A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		085A91CF24573E590071B904 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				08B048042492384B00D5C6FE /* Preferences */,
 				082069B6246E555B0099FD19 /* Import */,
 				082069B5246E55550099FD19 /* Export */,
 				085A91CB24573E190071B904 /* SessionListView */,
@@ -243,6 +248,15 @@
 				089AE1B624730EFC000D1437 /* ImportExportData.swift */,
 			);
 			path = ImportExport;
+			sourceTree = "<group>";
+		};
+		08B048042492384B00D5C6FE /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				08B048052492386200D5C6FE /* PreferencesViewConttroller.swift */,
+				08B048062492386200D5C6FE /* PreferencesViewConttroller.xib */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 		08CDF396244476140015732A = {
@@ -407,6 +421,7 @@
 				089AE1AE2472735E000D1437 /* ImportViewController.xib in Resources */,
 				082069AF246943BC0099FD19 /* ToolbarItemIcon.pdf in Resources */,
 				08CDF3C0244476160015732A /* SafariExtensionViewController.xib in Resources */,
+				08B048082492386200D5C6FE /* PreferencesViewConttroller.xib in Resources */,
 				08CDF3C3244476160015732A /* script.js in Resources */,
 				085A91C72456E0E10071B904 /* DetailViewController.xib in Resources */,
 				082069B4246A61760099FD19 /* Assets.xcassets in Resources */,
@@ -446,6 +461,7 @@
 				085A91D12457420F0071B904 /* TabCellView.swift in Sources */,
 				089AE1B12472FFFF000D1437 /* Util.swift in Sources */,
 				08CDF3BD244476160015732A /* SafariExtensionViewController.swift in Sources */,
+				08B048072492386200D5C6FE /* PreferencesViewConttroller.swift in Sources */,
 				08CDF3D32444B7790015732A /* Session.swift in Sources */,
 				089AE1AD2472735E000D1437 /* ImportViewController.swift in Sources */,
 				085A91D62459DC890071B904 /* Error+CloudKit.swift in Sources */,
@@ -609,7 +625,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "SessionBuddy Extension/SessionBuddy_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "SessionBuddy Extension/Info.plist";
@@ -618,7 +634,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.sessionbuddy.sfextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -631,7 +647,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "SessionBuddy Extension/SessionBuddy_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "SessionBuddy Extension/Info.plist";
@@ -640,7 +656,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.sessionbuddy.sfextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -656,7 +672,7 @@
 				CODE_SIGN_ENTITLEMENTS = SessionBuddy/SessionBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = SessionBuddy/Info.plist;
@@ -664,7 +680,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.sessionbuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -679,7 +695,7 @@
 				CODE_SIGN_ENTITLEMENTS = SessionBuddy/SessionBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = SessionBuddy/Info.plist;
@@ -687,7 +703,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.sessionbuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

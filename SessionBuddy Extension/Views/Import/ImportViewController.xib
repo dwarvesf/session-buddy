@@ -28,7 +28,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FKw-gs-67h">
-                    <rect key="frame" x="282.5" y="59" width="54" height="23"/>
+                    <rect key="frame" x="282" y="59" width="54" height="23"/>
                     <buttonCell key="cell" type="roundTextured" title="Import" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="WDg-MZ-apL">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -38,7 +38,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wEH-5q-yeN">
-                    <rect key="frame" x="7.5" y="59" width="28" height="23"/>
+                    <rect key="frame" x="8" y="59" width="27" height="23"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="27" id="1sc-B4-IZl"/>
                     </constraints>

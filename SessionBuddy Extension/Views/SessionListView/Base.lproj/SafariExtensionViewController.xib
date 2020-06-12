@@ -29,7 +29,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="344" height="262"/>
                     <subviews>
                         <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udi-bz-m67">
-                            <rect key="frame" x="8" y="231" width="293" height="23"/>
+                            <rect key="frame" x="8" y="231" width="294" height="23"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="23" id="d46-sK-va3"/>
                             </constraints>
@@ -43,7 +43,7 @@
                             </connections>
                         </searchField>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e3w-Iv-Tyo">
-                            <rect key="frame" x="309" y="231" width="27" height="22"/>
+                            <rect key="frame" x="309.5" y="231" width="27" height="22"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ico_setting" imagePosition="only" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ade-fe-2eW">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -55,13 +55,13 @@
                         <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPX-qB-5qb">
                             <rect key="frame" x="0.0" y="40" width="344" height="183"/>
                             <subviews>
-                                <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="33" horizontalPageScroll="10" verticalLineScroll="33" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4f6-G6-RSC">
+                                <scrollView ambiguous="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="33" horizontalPageScroll="10" verticalLineScroll="33" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4f6-G6-RSC">
                                     <rect key="frame" x="1" y="0.0" width="342" height="183"/>
-                                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="iYK-Hh-pmP">
+                                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="iYK-Hh-pmP">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="183"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="1" outlineTableColumn="vhI-ND-tnc" id="7do-ej-tms" customClass="SidebarView" customModule="Session_Buddy_Extension" customModuleProvider="target">
+                                            <outlineView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="1" outlineTableColumn="vhI-ND-tnc" id="7do-ej-tms" customClass="SidebarView" customModule="Session_Buddy_Extension" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="342" height="183"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <size key="intercellSpacing" width="2" height="3"/>
@@ -93,7 +93,7 @@
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_folder" id="Tks-E3-5MD"/>
                                                                     </imageView>
                                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a2J-RX-UCQ">
-                                                                        <rect key="frame" x="28" y="7" width="233" height="17"/>
+                                                                        <rect key="frame" x="28" y="7" width="208" height="17"/>
                                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="left" title="Work" id="r1w-1Y-Aem">
                                                                             <font key="font" metaFont="systemMedium" size="14"/>
                                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -104,17 +104,20 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOk-iw-d7n">
-                                                                        <rect key="frame" x="267" y="0.0" width="65" height="30"/>
+                                                                        <rect key="frame" x="242" y="0.0" width="90" height="30"/>
                                                                         <subviews>
-                                                                            <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSv-tc-HD3">
-                                                                                <rect key="frame" x="0.0" y="14" width="13" height="16"/>
+                                                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="ZSv-tc-HD3">
+                                                                                <rect key="frame" x="0.0" y="7" width="13" height="16"/>
                                                                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ico_share" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="oGx-B2-tsn">
                                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                                     <font key="font" metaFont="system"/>
                                                                                 </buttonCell>
+                                                                                <connections>
+                                                                                    <action selector="shareSession:" target="nDu-fM-rBE" id="jqs-V9-Nuz"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <button translatesAutoresizingMaskIntoConstraints="NO" id="TfP-zI-Eqk">
-                                                                                <rect key="frame" x="0.0" y="8" width="14" height="14"/>
+                                                                                <rect key="frame" x="21" y="8" width="14" height="14"/>
                                                                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ico_more" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="9Kg-BK-ODm">
                                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                                     <font key="font" metaFont="system"/>
@@ -123,9 +126,9 @@
                                                                                     <action selector="goToDetail:" target="nDu-fM-rBE" id="SeY-rw-1HE"/>
                                                                                 </connections>
                                                                             </button>
-                                                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Iaz-Uz-c2K">
-                                                                                <rect key="frame" x="22" y="5" width="43" height="21"/>
-                                                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="btn_open" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="IGI-us-7Dh">
+                                                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iaz-Uz-c2K">
+                                                                                <rect key="frame" x="42.5" y="3" width="48" height="23"/>
+                                                                                <buttonCell key="cell" type="roundTextured" title="Open" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="IGI-us-7Dh">
                                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                                     <font key="font" metaFont="system"/>
                                                                                 </buttonCell>
@@ -229,11 +232,11 @@
                                 </scrollView>
                                 <scrollView hidden="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="26" horizontalPageScroll="10" verticalLineScroll="26" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKo-gK-x2g">
                                     <rect key="frame" x="0.0" y="0.0" width="344" height="183"/>
-                                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="wWE-vz-98Y">
+                                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="wWE-vz-98Y">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="183"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" id="niN-3W-wt7">
+                                            <tableView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" viewBased="YES" id="niN-3W-wt7">
                                                 <rect key="frame" x="0.0" y="0.0" width="344" height="183"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -310,7 +313,7 @@
                             </customSpacing>
                         </stackView>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UcM-y6-sLj">
-                            <rect key="frame" x="8" y="7" width="328" height="25"/>
+                            <rect key="frame" x="7.5" y="7" width="329" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="Rx2-xC-Faa"/>
                             </constraints>
@@ -352,7 +355,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="btn_open" width="43" height="21"/>
         <image name="ico_circle" width="13" height="13"/>
         <image name="ico_folder" width="15" height="12"/>
         <image name="ico_more" width="14" height="14"/>
