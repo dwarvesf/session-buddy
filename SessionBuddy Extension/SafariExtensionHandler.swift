@@ -19,7 +19,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         // your extension calls safari.extension.dispatchMessage("message").
         if messageName == "DOMContentLoaded" || messageName == "BeforeUnload" {
             DispatchQueue.global(qos: .userInitiated).async {
-                self.saveLatestSession()
+                self.saveLatestSession();
             }
         }
     }
@@ -33,27 +33,32 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         SFSafariApplication.getActiveWindow { window in
             window?.getAllTabs { tabs in
                 var sessionTabs = [Tab]()
-                
                 for (index, tab) in tabs.enumerated() {
-                    tab.getActivePage { page in
-                        page?.getPropertiesWithCompletionHandler { properties in
-                            if let url = properties?.url?.absoluteString,
-                                let title = properties?.title {
-                                sessionTabs.append(Tab(title: title, url: url))
-                            }
-                            
-                            // Last element
-                            if index == tabs.count - 1 {
-                                var newSession = Session(
-                                    title: "Latest Session",
-                                    tabs: sessionTabs)
-                                
-                                newSession.isBackup = true
-                                LocalStorage.sessions = [newSession] + LocalStorage.sessions
-                                  NotificationCenter.default.post(Notification(name: Notification.Name("sessionDidChange")))
+                    tab.getContainingWindow(completionHandler: { win in
+                        let ignoreTab = Preferences.ignorePinnedTabs && win == nil;
+                        if !ignoreTab {
+                            tab.getActivePage { page in
+                                page?.getPropertiesWithCompletionHandler { properties in
+                                    if let url = properties?.url?.absoluteString,
+                                        let title = properties?.title {
+                                        sessionTabs.append(Tab(title: title, url: url))
+                                    }
+                                    
+                                    // Last element
+                                    if index == tabs.count - 1 {
+                                        var newSession = Session(
+                                            title: "Latest Session",
+                                            tabs: sessionTabs
+                                        )
+                                        
+                                        newSession.isBackup = true
+                                        LocalStorage.sessions = [newSession] + LocalStorage.sessions
+                                        NotificationCenter.default.post(Notification(name: Notification.Name("sessionDidChange")))
+                                    }
+                                }
                             }
                         }
-                    }
+                    })
                 }
             }
         }

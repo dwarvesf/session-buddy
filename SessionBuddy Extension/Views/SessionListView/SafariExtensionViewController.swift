@@ -159,34 +159,39 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
                 var sessionTabs = [Tab]()
                 
                 for (index, tab) in tabs.enumerated() {
-                    tab.getActivePage { page in
-                        page?.getPropertiesWithCompletionHandler { properties in
-                            if let url = properties?.url?.absoluteString,
-                                let title = properties?.title {
-                                sessionTabs.append(Tab(title: title, url: url))
-                            }
-                            
-                            // Last element
-                            if index == tabs.count - 1 {
-                                let title = Date().commonStringFormat()
-                                
-                                let newSession = Session(
-                                    title: title,
-                                    tabs: sessionTabs)
-                                
-                                newSession.save()
-                                DispatchQueue.main.async {
-                                    self.outlineView.insertItems(
-                                        at: .init(integer: LocalStorage.sessions.count - 1),
-                                        inParent: nil,
-                                        withAnimation: .effectFade)
+                    tab.getContainingWindow(completionHandler: { win in
+                        let ignoreTab = Preferences.ignorePinnedTabs && win == nil;
+                        if !ignoreTab {
+                            tab.getActivePage { page in
+                                page?.getPropertiesWithCompletionHandler { properties in
+                                    if let url = properties?.url?.absoluteString,
+                                        let title = properties?.title {
+                                        sessionTabs.append(Tab(title: title, url: url))
+                                    }
                                     
-                                    self.outlineView.scrollToEndOfDocument(self)
+                                    // Last element
+                                    if index == tabs.count - 1 {
+                                        let title = Date().commonStringFormat()
+                                        
+                                        let newSession = Session(
+                                            title: title,
+                                            tabs: sessionTabs)
+                                        
+                                        newSession.save()
+                                        DispatchQueue.main.async {
+                                            self.outlineView.insertItems(
+                                                at: .init(integer: LocalStorage.sessions.count - 1),
+                                                inParent: nil,
+                                                withAnimation: .effectFade)
+                                            
+                                            self.outlineView.scrollToEndOfDocument(self)
+                                        }
+                                    }
+                                                          
                                 }
                             }
-                                                  
                         }
-                    }
+                    })
                 }
             }
         }
