@@ -12,35 +12,35 @@ class PreferencesViewConttroller: NSViewController {
 
     @IBOutlet weak var checkboxShowLatestSession: NSButton!
     @IBOutlet weak var checkboxIgnorePinnedTabs: NSButton!
-
+    
     var onNavigationBack: ((Bool) -> Void)?
-
+    
     private var shouldUpdate = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
-
+    
     func set(onNavigationBack: @escaping ((Bool) -> Void)) {
         self.onNavigationBack = onNavigationBack
     }
-
+    
     private func setupViews() {
         checkboxShowLatestSession.state = Preferences.showLatestSession ? .on : .off
         checkboxIgnorePinnedTabs.state = Preferences.ignorePinnedTabs ? .on : .off
     }
-
+    
     @IBAction func toggleShowTheLatestSession(_ sender: Any) {
         Preferences.showLatestSession = checkboxShowLatestSession.state == .on
         if checkboxShowLatestSession.state == .on {
             LocalStorage.sessions.removeAll(where: (\.isBackup))
             NotificationCenter.default.post(Notification(name: Notification.Name("sessionDidChange")))
         }
-
+        
         shouldUpdate = true
     }
-
+    
     @IBAction func toggleIgnorePinnedTabs(_ sender: Any) {
         Preferences.ignorePinnedTabs = checkboxIgnorePinnedTabs.state == .on
 
@@ -52,5 +52,5 @@ class PreferencesViewConttroller: NSViewController {
         self.view.removeFromSuperview()
         self.removeFromParent()
     }
-
+    
 }

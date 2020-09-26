@@ -19,7 +19,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         // your extension calls safari.extension.dispatchMessage("message").
         if messageName == "DOMContentLoaded" || messageName == "BeforeUnload" {
             DispatchQueue.global(qos: .userInitiated).async {
-                self.saveLatestSession();
+                self.saveLatestSession()
             }
         }
     }
@@ -33,9 +33,10 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         SFSafariApplication.getActiveWindow { window in
             window?.getAllTabs { tabs in
                 var sessionTabs = [Tab]()
+                
                 for (index, tab) in tabs.enumerated() {
                     tab.getContainingWindow(completionHandler: { win in
-                        let ignoreTab = Preferences.ignorePinnedTabs && win == nil;
+                        let ignoreTab = Preferences.ignorePinnedTabs && win == nil
                         if !ignoreTab {
                             tab.getActivePage { page in
                                 page?.getPropertiesWithCompletionHandler { properties in

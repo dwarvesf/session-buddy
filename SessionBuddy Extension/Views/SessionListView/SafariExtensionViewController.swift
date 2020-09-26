@@ -160,7 +160,7 @@ class SafariExtensionViewController: SFSafariExtensionViewController {
                 
                 for (index, tab) in tabs.enumerated() {
                     tab.getContainingWindow(completionHandler: { win in
-                        let ignoreTab = Preferences.ignorePinnedTabs && win == nil;
+                        let ignoreTab = Preferences.ignorePinnedTabs && win == nil
                         if !ignoreTab {
                             tab.getActivePage { page in
                                 page?.getPropertiesWithCompletionHandler { properties in
