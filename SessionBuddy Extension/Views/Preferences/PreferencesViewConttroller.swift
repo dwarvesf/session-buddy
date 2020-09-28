@@ -11,6 +11,7 @@ import Cocoa
 class PreferencesViewConttroller: NSViewController {
 
     @IBOutlet weak var checkboxShowLatestSession: NSButton!
+    @IBOutlet weak var checkboxIgnorePinnedTabs: NSButton!
     
     var onNavigationBack: ((Bool) -> Void)?
     
@@ -27,6 +28,7 @@ class PreferencesViewConttroller: NSViewController {
     
     private func setupViews() {
         checkboxShowLatestSession.state = Preferences.showLatestSession ? .on : .off
+        checkboxIgnorePinnedTabs.state = Preferences.ignorePinnedTabs ? .on : .off
     }
     
     @IBAction func toggleShowTheLatestSession(_ sender: Any) {
@@ -39,6 +41,12 @@ class PreferencesViewConttroller: NSViewController {
         shouldUpdate = true
     }
     
+    @IBAction func toggleIgnorePinnedTabs(_ sender: Any) {
+        Preferences.ignorePinnedTabs = checkboxIgnorePinnedTabs.state == .on
+
+        shouldUpdate = true
+    }
+
     @IBAction func backToPrevious(_ sender: Any) {
         self.onNavigationBack?(shouldUpdate)
         self.view.removeFromSuperview()

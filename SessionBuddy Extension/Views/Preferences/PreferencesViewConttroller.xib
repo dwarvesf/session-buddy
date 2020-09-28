@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesViewConttroller" customModule="Session_Buddy_Extension" customModuleProvider="target">
             <connections>
+                <outlet property="checkboxIgnorePinnedTabs" destination="2tL-ZM-f9J" id="wQh-cu-wbS"/>
                 <outlet property="checkboxShowLatestSession" destination="o2i-AP-byM" id="led-PB-wBI"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -51,6 +52,17 @@
                     <connections>
                         <action selector="backToPrevious:" target="-2" id="bV2-g2-deM"/>
                     </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tL-ZM-f9J">
+                    <rect key="frame" x="6" y="11" width="136" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Ignore pinned tabs" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="okC-t9-0Bw">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <connections>
+                            <action selector="toggleIgnorePinnedTabs:" target="-2" id="VBP-xc-pvu"/>
+                        </connections>
+                    </buttonCell>
                 </button>
             </subviews>
             <constraints>

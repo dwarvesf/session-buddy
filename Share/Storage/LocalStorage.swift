@@ -12,6 +12,7 @@ extension UserDefaults {
     enum Key {
         static let sessions = "sessions"
         static let showLatestSession = "showLatestSession"
+        static let ignorePinnedTabs = "ignorePinnedTabs"
     }
 }
 
@@ -46,6 +47,20 @@ enum Preferences {
             UserDefaults.standard.set(
                 newValue,
                 forKey: UserDefaults.Key.showLatestSession)
+        }
+    }
+
+    static var ignorePinnedTabs: Bool {
+        get {
+            UserDefaults
+                .standard
+                .bool(forKey: UserDefaults.Key.ignorePinnedTabs)
+        }
+        
+        set {
+            UserDefaults.standard.set(
+                newValue,
+                forKey: UserDefaults.Key.ignorePinnedTabs)
         }
     }
 }
